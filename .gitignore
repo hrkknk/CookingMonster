@@ -1,0 +1,26 @@
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+xcuserdata/
+
+## Other
+*.xcuserstate
+
+# Swift Package Manager
+.build/
+
+# CocoaPods
+#
+Pods/
+
+# fastlane
+fastlane/report.xml
+fastlane/screenshots
+
+.DS_Store
+
+.bundle
+*.generated.swift
+
