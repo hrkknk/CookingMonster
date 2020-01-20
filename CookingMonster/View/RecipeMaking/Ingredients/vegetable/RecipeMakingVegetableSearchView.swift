@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RecipeMakingVegetableSearchView: View {
     @EnvironmentObject var sharedData: SharedData
+    
     var body: some View {
         VStack(spacing: 100) {
             Text("未実装")
