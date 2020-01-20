@@ -14,30 +14,30 @@ struct RecipeMakingHomeView: View {
     var body: some View {
         VStack(spacing: 50) {
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.recipeMakingIngredients
+                self.sharedData.displayedView = .recipeMakingIngredients
             }) {
                 Text("材料")
             }
 
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.recipeMakingSeasoning
+                self.sharedData.displayedView = .recipeMakingSeasoning
             }) {
                 Text("調味料")
             }
 
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.recipeMakingProcedure
+                self.sharedData.displayedView = .recipeMakingProcedure
             }) {
                 Text("つくりかた")
             }
 
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.recipeMakingMemo
+                self.sharedData.displayedView = .recipeMakingMemo
             }) {
                 Text("メモ")
             }
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.home
+                self.sharedData.displayedView = .home
             }) {
                 Text("戻る")
             }

@@ -1,5 +1,5 @@
 //
-//  RecipeMakingMemoView.swift
+//  RecipeMakingProcedureView.swift
 //  CookingMonster
 //
 //  Created by hiroki kaneko on 2020/01/19.
@@ -8,20 +8,20 @@
 
 import SwiftUI
 
-struct RecipeMakingMemoView: View {
+struct RecipeMakingProcedureView: View {
     @EnvironmentObject var sharedData: SharedData
 
     var body: some View {
         Button(action: {
-            self.sharedData.displayedView = DisplayedView.recipeMakingHome
+            self.sharedData.displayedView = .recipeMakingHome
         }) {
-        Text("RecipeMakingMemo")
+        Text("未実装(戻る)")
         }
     }
 }
 
-struct RecipeMakingMemoView_Previews: PreviewProvider {
+struct RecipeMakingProcedureView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeMakingMemoView()
+        RecipeMakingProcedureView()
     }
 }

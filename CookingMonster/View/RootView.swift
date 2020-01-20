@@ -19,8 +19,11 @@ struct RootView: View {
 
     func containedView() -> AnyView {
         switch sharedData.displayedView {
+        //RecipeMaking
         case .recipeMakingHome: return AnyView(RecipeMakingHomeView())
         case .recipeMakingIngredients: return AnyView(RecipeMakingIngredientsView())
+        case .recipeMakingVegetables: return AnyView(RecipeMakingVegetablesView())
+        case .recipeMakingVegetableSearch: return AnyView(RecipeMakingVegetableSearchView())
         case .recipeMakingSeasoning: return AnyView(RecipeMakingSeasoningView())
         case .recipeMakingProcedure: return AnyView(RecipeMakingProcedureView())
         case .recipeMakingMemo: return AnyView(RecipeMakingMemoView())

@@ -13,9 +13,9 @@ struct RecipeMakingSeasoningView: View {
 
     var body: some View {
         Button(action: {
-            self.sharedData.displayedView = DisplayedView.recipeMakingHome
+            self.sharedData.displayedView = .recipeMakingHome
         }) {
-        Text("RecipeMakingSeasoning")
+        Text("未実装(戻る)")
         }
     }
 }

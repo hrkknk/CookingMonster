@@ -14,7 +14,7 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 100) {
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.recipeMakingHome
+                self.sharedData.displayedView = .recipeMakingHome
             }) {
                 Text("レシピをつくる")
             }

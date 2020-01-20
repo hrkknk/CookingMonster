@@ -6,14 +6,16 @@
 //  Copyright © 2020 hiroki kaneko. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
-enum DisplayedView{
+enum DisplayedView {
     case home
+    //RecipeMaking
     case recipeMakingRoot
     case recipeMakingHome
     case recipeMakingIngredients
+    case recipeMakingVegetables
+    case recipeMakingVegetableSearch
     case recipeMakingSeasoning
     case recipeMakingProcedure
     case recipeMakingMemo
@@ -21,4 +23,5 @@ enum DisplayedView{
 
 class SharedData: ObservableObject {
     @Published var displayedView = DisplayedView.home
+    @Published var vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .unselected)
 }
