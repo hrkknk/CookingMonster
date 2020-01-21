@@ -10,10 +10,24 @@ import SwiftUI
 
 struct RecipeMakingVegetableSearchView: View {
     @EnvironmentObject var sharedData: SharedData
-    
+
+    // TODO: DBから取得
+    let vegetables: [Vegetable] = [
+        Vegetable(id: 0, name: "ピーマン", colors: [.green], type: .fruit),
+        Vegetable(id: 1, name: "キャベツ", colors: [.green], type: .leaf),
+        Vegetable(id: 2, name: "とうもろこし", colors: [.yellow], type: .fruit),
+        Vegetable(id: 3, name: "大根", colors: [.white], type: .root),
+        Vegetable(id: 4, name: "なす", colors: [.purple], type: .fruit),
+        Vegetable(id: 5, name: "トマト", colors: [.red], type: .fruit)
+    ]
+
     var body: some View {
-        VStack(spacing: 100) {
-            Text("未実装")
+        VStack {
+            NavigationView {
+                List (sharedData.vegetableSearchFilter.apply(vegetables: vegetables)) { vegetable in
+                    Text(vegetable.name)
+                }.navigationBarTitle("野菜をさがす")
+            }
 
             Button(action: {
             }) {

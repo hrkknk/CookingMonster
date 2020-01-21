@@ -23,3 +23,10 @@ enum VegetableType {
     case root
     case fruit
 }
+
+struct Vegetable: Identifiable {
+    var id: Int
+    let name: String
+    let colors: [VegetableColor]
+    let type: VegetableType
+}
