@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC0628FE23D60AAD00D208D5 /* BoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0628FD23D60AAD00D208D5 /* BoxView.swift */; };
 		CC06290823D6121500D208D5 /* Vegetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC06290723D6121500D208D5 /* Vegetable.swift */; };
-		CC06290A23D6153400D208D5 /* SearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC06290923D6153400D208D5 /* SearchFilter.swift */; };
+		CC06290A23D6153400D208D5 /* VegetableSearchFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC06290923D6153400D208D5 /* VegetableSearchFilter.swift */; };
 		CC06290C23D61C2F00D208D5 /* RecipeMakingVegetableSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC06290B23D61C2F00D208D5 /* RecipeMakingVegetableSearchView.swift */; };
 		CC1E015423CF8F6C00F325A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E015323CF8F6C00F325A9 /* AppDelegate.swift */; };
 		CC1E015623CF8F6C00F325A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1E015523CF8F6C00F325A9 /* SceneDelegate.swift */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		CC0628FD23D60AAD00D208D5 /* BoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxView.swift; sourceTree = "<group>"; };
 		CC06290723D6121500D208D5 /* Vegetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetable.swift; sourceTree = "<group>"; };
-		CC06290923D6153400D208D5 /* SearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilter.swift; sourceTree = "<group>"; };
+		CC06290923D6153400D208D5 /* VegetableSearchFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegetableSearchFilter.swift; sourceTree = "<group>"; };
 		CC06290B23D61C2F00D208D5 /* RecipeMakingVegetableSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMakingVegetableSearchView.swift; sourceTree = "<group>"; };
 		CC1E015023CF8F6C00F325A9 /* CookingMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookingMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1E015323CF8F6C00F325A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 			children = (
 				CC4180FC23D2CFBE009E1EA5 /* SharedData.swift */,
 				CC06290723D6121500D208D5 /* Vegetable.swift */,
-				CC06290923D6153400D208D5 /* SearchFilter.swift */,
+				CC06290923D6153400D208D5 /* VegetableSearchFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				CC41814C23D35D43009E1EA5 /* RecipeMakingMemoView.swift in Sources */,
 				CC1E015423CF8F6C00F325A9 /* AppDelegate.swift in Sources */,
 				CC1E015623CF8F6C00F325A9 /* SceneDelegate.swift in Sources */,
-				CC06290A23D6153400D208D5 /* SearchFilter.swift in Sources */,
+				CC06290A23D6153400D208D5 /* VegetableSearchFilter.swift in Sources */,
 				CC06290823D6121500D208D5 /* Vegetable.swift in Sources */,
 				CC41814823D35D28009E1EA5 /* RecipeMakingSeasoningView.swift in Sources */,
 				CC1E015823CF8F6C00F325A9 /* RootView.swift in Sources */,

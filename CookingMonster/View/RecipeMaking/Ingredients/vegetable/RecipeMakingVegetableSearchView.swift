@@ -25,7 +25,9 @@ struct RecipeMakingVegetableSearchView: View {
         VStack {
             NavigationView {
                 List (sharedData.vegetableSearchFilter.apply(vegetables: vegetables)) { vegetable in
-                    Text(vegetable.name)
+                    Text(vegetable.name).onTapGesture {
+                        //TODO: レシピに材料を追加
+                    }
                 }.navigationBarTitle("野菜をさがす")
             }
 

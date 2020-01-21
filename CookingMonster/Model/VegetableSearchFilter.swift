@@ -1,5 +1,5 @@
 //
-//  SearchFilter.swift
+//  VegetableSearchFilter.swift
 //  CookingMonster
 //
 //  Created by hiroki kaneko on 2020/01/21.
