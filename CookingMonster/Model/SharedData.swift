@@ -24,5 +24,5 @@ enum DisplayedView {
 class SharedData: ObservableObject {
     @Published var displayedView = DisplayedView.home
     @Published var vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .unselected)
-    @Published var recipe = Recipe()
+    @Published var recipe = Recipe(id: nil, name: "", ingredients: [])
 }
