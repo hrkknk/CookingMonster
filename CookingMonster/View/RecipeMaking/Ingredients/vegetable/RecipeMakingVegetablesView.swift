@@ -38,6 +38,7 @@ struct RecipeMakingVegetablesView: View {
             Button(action: {
             }) {
                 Text("戻る").onTapGesture {
+                    self.sharedData.selectedIngredient = nil
                     self.sharedData.displayedView = .recipeMakingIngredients
                 }
             }

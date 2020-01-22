@@ -29,4 +29,5 @@ struct Vegetable: Identifiable {
     let name: String
     let colors: [VegetableColor]
     let type: VegetableType
+    let unit: String
 }

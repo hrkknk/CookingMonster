@@ -37,6 +37,9 @@ struct RecipeMakingIngredientsView: View {
             }) {
                 Text("その他")
             }
+
+            Text("レシピに追加した材料： \(sharedData.recipe.ingredients.count)種類")
+
             Button(action: {
             }) {
                 Text("戻る").onTapGesture {

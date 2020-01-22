@@ -20,5 +20,6 @@ struct Ingredient: Identifiable {
     let id: Int
     let name: String
     let type: IngredientType
-    let amount: Int?
+    var amount: Int?
+    let unit: String
 }

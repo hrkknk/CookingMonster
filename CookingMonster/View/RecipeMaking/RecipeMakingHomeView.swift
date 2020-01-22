@@ -12,34 +12,46 @@ struct RecipeMakingHomeView: View {
     @EnvironmentObject var sharedData: SharedData
 
     var body: some View {
-        VStack(spacing: 50) {
-            Button(action: {
-                self.sharedData.displayedView = .recipeMakingIngredients
-            }) {
-                Text("材料")
+        VStack {
+            Spacer()
+            VStack(spacing: 50) {
+                Button(action: {
+                    self.sharedData.displayedView = .recipeMakingIngredients
+                }) {
+                    Text("材料")
+                }
+
+                Button(action: {
+                    self.sharedData.displayedView = .recipeMakingSeasoning
+                }) {
+                    Text("調味料")
+                }
+
+                Button(action: {
+                    self.sharedData.displayedView = .recipeMakingProcedure
+                }) {
+                    Text("手順")
+                }
+
+                Button(action: {
+                    self.sharedData.displayedView = .recipeMakingMemo
+                }) {
+                    Text("メモ")
+                }
             }
 
-            Button(action: {
-                self.sharedData.displayedView = .recipeMakingSeasoning
-            }) {
-                Text("調味料")
-            }
+            Spacer()
 
-            Button(action: {
-                self.sharedData.displayedView = .recipeMakingProcedure
-            }) {
-                Text("つくりかた")
-            }
-
-            Button(action: {
-                self.sharedData.displayedView = .recipeMakingMemo
-            }) {
-                Text("メモ")
-            }
-            Button(action: {
-                self.sharedData.displayedView = .home
-            }) {
-                Text("戻る")
+            VStack(spacing: 30) {
+                Text("追加した材料： \(sharedData.recipe.ingredients.count)種類")
+                Text("追加した調味料： 0種類")
+                Text("追加した手順： 0")
+                Text("追加したメモ： 0")
+                Button(action: {
+                    self.sharedData.displayedView = .home
+                }) {
+                    Text("戻る")
+                }
             }
         }
     }

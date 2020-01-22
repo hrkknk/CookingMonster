@@ -13,7 +13,10 @@ struct RootView: View {
 
     var body: some View {
         VStack {
+            Text("\(sharedData.displayedView.rawValue)")
+            Spacer()
             containedView()
+            Spacer()
         }
     }
 
@@ -22,6 +25,7 @@ struct RootView: View {
         //RecipeMaking
         case .recipeMakingHome: return AnyView(RecipeMakingHomeView())
         case .recipeMakingIngredients: return AnyView(RecipeMakingIngredientsView())
+        case .recipeMakingAddIngredient: return AnyView(RecipeMakingAddIngredientView())
         case .recipeMakingVegetables: return AnyView(RecipeMakingVegetablesView())
         case .recipeMakingVegetableSearch: return AnyView(RecipeMakingVegetableSearchView())
         case .recipeMakingSeasoning: return AnyView(RecipeMakingSeasoningView())
