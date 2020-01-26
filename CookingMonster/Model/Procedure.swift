@@ -8,7 +8,8 @@
 
 import Foundation
 
-enum ProcedureAction {
+enum ProcedureAction: String, CaseIterable {
+    case chop //切る
     case bake //（オーブンで）焼く
     case broil //（上から直火で）焼く　※日本では一般的ではありませんが、アメリカのキッチンにはコンロと一体型のオーブンがついていてブロイルできるようになっています。
     case grill //（下から直火で）焼く

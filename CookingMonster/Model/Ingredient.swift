@@ -16,7 +16,7 @@ enum IngredientType {
     case other
 }
 
-struct Ingredient: Identifiable {
+struct Ingredient: Identifiable, Hashable {
     let id: Int
     let name: String
     let type: IngredientType
