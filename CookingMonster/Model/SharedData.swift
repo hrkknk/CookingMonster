@@ -25,5 +25,5 @@ class SharedData: ObservableObject {
     @Published var displayedView = DisplayedView.home
     @Published var vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .unselected)
     @Published var selectedIngredient: Ingredient?
-    @Published var recipe = Recipe(id: nil, name: "", ingredients: [])
+    @Published var recipe = Recipe(id: nil, name: "", ingredients: [], procedures: [])
 }

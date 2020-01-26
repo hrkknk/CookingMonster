@@ -15,6 +15,7 @@ enum VegetableColor {
     case green
     case white
     case purple
+    case brown
 }
 
 enum VegetableType {
@@ -22,6 +23,7 @@ enum VegetableType {
     case leaf
     case root
     case fruit
+    case mushroom
 }
 
 struct Vegetable: Identifiable {

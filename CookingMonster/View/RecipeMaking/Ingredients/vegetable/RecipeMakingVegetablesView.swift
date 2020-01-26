@@ -16,7 +16,7 @@ enum SegmentType {
 struct RecipeMakingVegetablesView: View {
     @EnvironmentObject var sharedData: SharedData
     @State var selectedSegment = SegmentType.colorSearch
-
+    
     var body: some View {
         VStack(spacing: 100) {
             Picker(selection: $selectedSegment, label: Text("")) {
@@ -24,7 +24,7 @@ struct RecipeMakingVegetablesView: View {
                 Text("種類でさがす").tag(SegmentType.classificationSearch)
             }
             .pickerStyle(SegmentedPickerStyle())
-
+            
             ScrollView(.horizontal) {
                 HStack {
                     ForEach(getBoxes()) { box in
@@ -34,7 +34,7 @@ struct RecipeMakingVegetablesView: View {
                     }
                 }.padding(20)
             }
-
+            
             Button(action: {
             }) {
                 Text("戻る").onTapGesture {
@@ -44,7 +44,7 @@ struct RecipeMakingVegetablesView: View {
             }
         }
     }
-
+    
     private func getBoxes() -> [Box] {
         var boxes: [Box] = []
         switch selectedSegment {
@@ -52,20 +52,22 @@ struct RecipeMakingVegetablesView: View {
             boxes = [
                 Box(id: 0, title: "葉物", imageUrl: "leafVegetable"),
                 Box(id: 1, title: "根菜", imageUrl: "rootVegetable"),
-                Box(id: 2, title: "果実", imageUrl: "fruitVegetable")
+                Box(id: 2, title: "果実", imageUrl: "fruitVegetable"),
+                Box(id: 3, title: "きのこ", imageUrl: "mushroom")
             ]
         default:
             boxes = [
-                Box(id: 3, title: "赤", imageUrl: "red"),
-                Box(id: 4, title: "黄", imageUrl: "yellow"),
-                Box(id: 5, title: "緑", imageUrl: "green"),
-                Box(id: 6, title: "白", imageUrl: "white"),
-                Box(id: 7, title: "紫", imageUrl: "purple")
+                Box(id: 4, title: "赤", imageUrl: "red"),
+                Box(id: 5, title: "黄", imageUrl: "yellow"),
+                Box(id: 6, title: "緑", imageUrl: "green"),
+                Box(id: 7, title: "白", imageUrl: "white"),
+                Box(id: 8, title: "紫", imageUrl: "purple"),
+                Box(id: 9, title: "茶", imageUrl: "brown")
             ]
         }
         return boxes
     }
-
+    
     private func showVegetableSeachView(id: Int) {
         //TODO: 検索パラメータを渡して画面遷移
         switch id {
@@ -76,15 +78,19 @@ struct RecipeMakingVegetablesView: View {
         case 2:
             self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .fruit, color: .unselected)
         case 3:
-            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .red)
+            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .mushroom, color: .unselected)
         case 4:
-            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .yellow)
+            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .red)
         case 5:
-            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .green)
+            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .yellow)
         case 6:
-            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .white)
+            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .green)
         case 7:
+            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .white)
+        case 8:
             self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .purple)
+        case 9:
+            self.sharedData.vegetableSearchFilter = VegetableSearchFilter(type: .unselected, color: .brown)
         default:
             print("Error: 不正なBox ID")
         }

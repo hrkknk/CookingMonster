@@ -18,7 +18,8 @@ struct RecipeMakingVegetableSearchView: View {
         Vegetable(id: 2, name: "とうもろこし", colors: [.yellow], type: .fruit, unit: "本"),
         Vegetable(id: 3, name: "大根", colors: [.white], type: .root, unit: "本"),
         Vegetable(id: 4, name: "なす", colors: [.purple], type: .fruit, unit: "本"),
-        Vegetable(id: 5, name: "トマト", colors: [.red], type: .fruit, unit: "個")
+        Vegetable(id: 5, name: "トマト", colors: [.red], type: .fruit, unit: "個"),
+        Vegetable(id: 6, name: "しめじ", colors: [.brown, .white], type: .mushroom, unit: "株")
     ]
 
     var body: some View {
