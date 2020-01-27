@@ -27,7 +27,7 @@ enum VegetableType {
 }
 
 struct Vegetable: Identifiable {
-    let id: Int
+    let id: UUID
     let name: String
     let colors: [VegetableColor]
     let type: VegetableType

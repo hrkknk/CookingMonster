@@ -27,6 +27,7 @@
 		CC41814A23D35D35009E1EA5 /* RecipeMakingProcedureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41814923D35D35009E1EA5 /* RecipeMakingProcedureView.swift */; };
 		CC41814C23D35D43009E1EA5 /* RecipeMakingMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41814B23D35D43009E1EA5 /* RecipeMakingMemoView.swift */; };
 		CC41815023D363CF009E1EA5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41814F23D363CF009E1EA5 /* HomeView.swift */; };
+		CCC5C7D023DF460F0075773E /* FoodStaff.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC5C7CF23DF460F0075773E /* FoodStaff.swift */; };
 		CCE53BAA23D74A740021B68C /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE53BA923D74A740021B68C /* Recipe.swift */; };
 		CCE53BAC23D74B070021B68C /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE53BAB23D74B070021B68C /* Ingredient.swift */; };
 		CCE53BAE23D74C670021B68C /* RecipeMakingAddIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE53BAD23D74C670021B68C /* RecipeMakingAddIngredientView.swift */; };
@@ -80,6 +81,7 @@
 		CC41814923D35D35009E1EA5 /* RecipeMakingProcedureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMakingProcedureView.swift; sourceTree = "<group>"; };
 		CC41814B23D35D43009E1EA5 /* RecipeMakingMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMakingMemoView.swift; sourceTree = "<group>"; };
 		CC41814F23D363CF009E1EA5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CCC5C7CF23DF460F0075773E /* FoodStaff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStaff.swift; sourceTree = "<group>"; };
 		CCE53BA923D74A740021B68C /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		CCE53BAB23D74B070021B68C /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		CCE53BAD23D74C670021B68C /* RecipeMakingAddIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMakingAddIngredientView.swift; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 				CC06290723D6121500D208D5 /* Vegetable.swift */,
 				CC06290923D6153400D208D5 /* VegetableSearchFilter.swift */,
 				CCE53BA923D74A740021B68C /* Recipe.swift */,
+				CCC5C7CF23DF460F0075773E /* FoodStaff.swift */,
 				CCE5F01223DA041200A4E745 /* Seasoning.swift */,
 				CCE53BAB23D74B070021B68C /* Ingredient.swift */,
 				CCE5F01423DA06C800A4E745 /* Procedure.swift */,
@@ -408,6 +411,7 @@
 				CC06290A23D6153400D208D5 /* VegetableSearchFilter.swift in Sources */,
 				CCE5F01323DA041200A4E745 /* Seasoning.swift in Sources */,
 				CCE53BAE23D74C670021B68C /* RecipeMakingAddIngredientView.swift in Sources */,
+				CCC5C7D023DF460F0075773E /* FoodStaff.swift in Sources */,
 				CC06290823D6121500D208D5 /* Vegetable.swift in Sources */,
 				CC41814823D35D28009E1EA5 /* RecipeMakingSeasoningView.swift in Sources */,
 				CC1E015823CF8F6C00F325A9 /* RootView.swift in Sources */,

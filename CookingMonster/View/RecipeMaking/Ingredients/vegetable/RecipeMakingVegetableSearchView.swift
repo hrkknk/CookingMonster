@@ -13,13 +13,13 @@ struct RecipeMakingVegetableSearchView: View {
 
     // TODO: DBから取得
     let vegetables: [Vegetable] = [
-        Vegetable(id: 0, name: "ピーマン", colors: [.green], type: .fruit, unit: "個"),
-        Vegetable(id: 1, name: "キャベツ", colors: [.green], type: .leaf, unit: "個"),
-        Vegetable(id: 2, name: "とうもろこし", colors: [.yellow], type: .fruit, unit: "本"),
-        Vegetable(id: 3, name: "大根", colors: [.white], type: .root, unit: "本"),
-        Vegetable(id: 4, name: "なす", colors: [.purple], type: .fruit, unit: "本"),
-        Vegetable(id: 5, name: "トマト", colors: [.red], type: .fruit, unit: "個"),
-        Vegetable(id: 6, name: "しめじ", colors: [.brown, .white], type: .mushroom, unit: "株")
+        Vegetable(id: UUID(), name: "ピーマン", colors: [.green], type: .fruit, unit: "個"),
+        Vegetable(id: UUID(), name: "キャベツ", colors: [.green], type: .leaf, unit: "個"),
+        Vegetable(id: UUID(), name: "とうもろこし", colors: [.yellow], type: .fruit, unit: "本"),
+        Vegetable(id: UUID(), name: "大根", colors: [.white], type: .root, unit: "本"),
+        Vegetable(id: UUID(), name: "なす", colors: [.purple], type: .fruit, unit: "本"),
+        Vegetable(id: UUID(), name: "トマト", colors: [.red], type: .fruit, unit: "個"),
+        Vegetable(id: UUID(), name: "しめじ", colors: [.brown, .white], type: .mushroom, unit: "株")
     ]
 
     var body: some View {

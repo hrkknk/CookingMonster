@@ -16,10 +16,10 @@ enum IngredientType {
     case other
 }
 
-struct Ingredient: Identifiable, Hashable {
-    let id: Int
+struct Ingredient: FoodStaff, Identifiable, Hashable {
+    let id: UUID
     let name: String
     let type: IngredientType
     var amount: Int?
-    let unit: String
+    var unit: String
 }

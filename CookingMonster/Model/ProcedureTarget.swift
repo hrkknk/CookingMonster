@@ -9,6 +9,5 @@
 import Foundation
 
 struct ProcedureTarget {
-    var ingredients: [Ingredient]?
-    var seasonings: [Seasoning]?
+    var foodStaff: [FoodStaff]?
 }

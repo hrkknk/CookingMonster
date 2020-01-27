@@ -67,7 +67,7 @@ struct RecipeMakingProcedureView: View {
 
     func addProcedureToRecipe() {
         let target: [ProcedureTarget] = [
-            ProcedureTarget(ingredients: selectedIngredient(), seasonings: nil)
+            ProcedureTarget(foodStaff: selectedFoodStaff())
         ]
         let procedure = Procedure(title: "",
                                   order: self.sharedData.recipe.procedures.count,
@@ -78,16 +78,23 @@ struct RecipeMakingProcedureView: View {
         sharedData.recipe.procedures.append(procedure)
     }
 
-    func selectedIngredient() -> [Ingredient] {
-        var selectedIngredient: [Ingredient] = []
+    func selectedFoodStaff() -> [FoodStaff] {
+        var selectedFoodStaff: [FoodStaff] = []
         for selected in selectionKeeper {
-            for ingredient in sharedData.recipe.ingredients {
-                if selected == ingredient.name {
-                    selectedIngredient.append(ingredient)
+            for foodStaff in sharedData.recipe.ingredients {
+                if selected == foodStaff.name {
+                    selectedFoodStaff.append(foodStaff)
+                }
+            }
+            if let seasonings = sharedData.recipe.seasonings {
+                for foodStaff in seasonings {
+                    if selected == foodStaff.name {
+                        selectedFoodStaff.append(foodStaff)
+                    }
                 }
             }
         }
-        return selectedIngredient
+        return selectedFoodStaff
     }
 
     func clearSelections() {

@@ -24,11 +24,11 @@ enum SeasoningTaste {
     case other
 }
 
-struct Seasoning: Identifiable {
-    let id: Int
+struct Seasoning: FoodStaff, Identifiable {
+    let id: UUID
     let name: String
     let form: SeasoningForm
     let tastes: [SeasoningTaste]
     var amount: Int?
-    let unit: String
+    var unit: String
 }
