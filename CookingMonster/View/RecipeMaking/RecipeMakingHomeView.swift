@@ -47,7 +47,7 @@ struct RecipeMakingHomeView: View {
                 Text("追加した材料： \(sharedData.recipe.ingredients.count)種類")
                 Text("追加した調味料： 0種類")
                 // TODO: 材料とも調味料とも言えないもの(水とか)の扱いを考える
-                Text("追加した手順： 0")
+                Text("追加した手順： \(sharedData.recipe.procedures.count)手順")
                 Text("追加したメモ： 0")
 
                 Button(action: {

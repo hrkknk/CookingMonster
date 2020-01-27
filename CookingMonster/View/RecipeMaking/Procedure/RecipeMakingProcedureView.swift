@@ -41,12 +41,14 @@ struct RecipeMakingProcedureView: View {
 
                 HStack(spacing: 100) {
                     Button(action: {
+                        self.addProcedureToRecipe()
                         self.sharedData.displayedView = .recipeMakingHome
                     }) {
                         Text("完了")
                     }
                     Button(action: {
-                        self.sharedData.displayedView = .recipeMakingHome
+                        self.addProcedureToRecipe()
+                        self.clearSelections()
                     }) {
                         Text("次の手順を入力する")
                     }
@@ -61,6 +63,37 @@ struct RecipeMakingProcedureView: View {
             ingredientsNameList.append(item.name)
         }
         return ingredientsNameList
+    }
+
+    func addProcedureToRecipe() {
+        let target: [ProcedureTarget] = [
+            ProcedureTarget(ingredients: selectedIngredient(), seasonings: nil)
+        ]
+        let procedure = Procedure(title: "",
+                                  order: self.sharedData.recipe.procedures.count,
+                                  target: target,
+                                  action: selectedAction,
+                                  minute: nil,
+                                  second: nil)
+        sharedData.recipe.procedures.append(procedure)
+    }
+
+    func selectedIngredient() -> [Ingredient] {
+        var selectedIngredient: [Ingredient] = []
+        for selected in selectionKeeper {
+            for ingredient in sharedData.recipe.ingredients {
+                if selected == ingredient.name {
+                    selectedIngredient.append(ingredient)
+                }
+            }
+        }
+        return selectedIngredient
+    }
+
+    func clearSelections() {
+        selectedTarget = []
+        selectedAction = .chop
+        selectionKeeper.removeAll()
     }
 }
 
