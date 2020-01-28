@@ -61,13 +61,13 @@ struct RecipeMakingLiquidView: View {
             ]
         default:
             boxes = [
-                Box(id: 7, title: "白", imageUrl: "whiteLiquid"),
-                Box(id: 8, title: "赤", imageUrl: "redLiquid"),
-                Box(id: 9, title: "黄", imageUrl: "yellowLiquid"),
-                Box(id: 10, title: "茶", imageUrl: "brownLiquid"),
-                Box(id: 11, title: "黒", imageUrl: "blackLiquid"),
-                Box(id: 12, title: "緑", imageUrl: "greenLiquid"),
-                Box(id: 13, title: "透明", imageUrl: "transparentLiquid"),
+                Box(id: 8, title: "白", imageUrl: "whiteLiquid"),
+                Box(id: 9, title: "赤", imageUrl: "redLiquid"),
+                Box(id: 10, title: "黄", imageUrl: "yellowLiquid"),
+                Box(id: 11, title: "茶", imageUrl: "brownLiquid"),
+                Box(id: 12, title: "黒", imageUrl: "blackLiquid"),
+                Box(id: 13, title: "緑", imageUrl: "greenLiquid"),
+                Box(id: 14, title: "透明", imageUrl: "transparentLiquid"),
             ]
         }
         return boxes
@@ -104,6 +104,8 @@ struct RecipeMakingLiquidView: View {
             self.sharedData.liquidSearchFilter = LiquidSearchFilter(color: .black, taste: .unselected)
         case 13:
             self.sharedData.liquidSearchFilter = LiquidSearchFilter(color: .green, taste: .unselected)
+        case 14:
+            self.sharedData.liquidSearchFilter = LiquidSearchFilter(color: .transparent, taste: .unselected)
         default:
             print("Error: 不正なBox ID")
         }

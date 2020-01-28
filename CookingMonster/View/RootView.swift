@@ -31,6 +31,7 @@ struct RootView: View {
         case .recipeMakingSeasoning: return AnyView(RecipeMakingSeasoningView())
         case .recipeMakingLiquid: return AnyView(RecipeMakingLiquidView())
         case .recipeMakingLiquidSearch: return AnyView(RecipeMakingLiquidSearchView())
+        case .recipeMakingAddSeasoning: return AnyView(RecipeMakingAddSeasoningView())
         case .recipeMakingProcedure: return AnyView(RecipeMakingProcedureView())
         case .recipeMakingMemo: return AnyView(RecipeMakingMemoView())
         default: return AnyView(HomeView())

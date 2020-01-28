@@ -19,6 +19,7 @@ enum DisplayedView: String {
     case recipeMakingSeasoning = "調味料をえらぶ"
     case recipeMakingLiquid = "調味料(液体)をえらぶ"
     case recipeMakingLiquidSearch = "調味料(液体)をさがす"
+    case recipeMakingAddSeasoning = "調味料(液体)を追加する"
     case recipeMakingProcedure = "つくりかた"
     case recipeMakingMemo = "メモ"
 }

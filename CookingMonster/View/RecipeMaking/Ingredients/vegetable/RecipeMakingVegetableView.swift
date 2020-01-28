@@ -34,6 +34,13 @@ struct RecipeMakingVegetableView: View {
                     }
                 }.padding(20)
             }
+
+            Button(action: {
+            }) {
+                Text("戻る").onTapGesture {
+                    self.sharedData.displayedView = .recipeMakingIngredients
+                }
+            }
         }
     }
     
