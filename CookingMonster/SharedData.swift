@@ -30,5 +30,5 @@ class SharedData: ObservableObject {
     @Published var liquidSearchFilter = LiquidSearchFilter(color: .unselected, taste: .unselected)
     @Published var selectedIngredient: Ingredient?
     @Published var selectedSeasoning: Seasoning?
-    @Published var recipe = Recipe(id: nil, name: "", ingredients: [], procedures: [])
+    @Published var recipe = Recipe(id: nil, name: "", ingredients: [], seasonings: [] ,procedures: [], memos: [])
 }

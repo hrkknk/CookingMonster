@@ -168,6 +168,7 @@
 			children = (
 				CC1E015323CF8F6C00F325A9 /* AppDelegate.swift */,
 				CC1E015523CF8F6C00F325A9 /* SceneDelegate.swift */,
+				CC4180FC23D2CFBE009E1EA5 /* SharedData.swift */,
 				CC29E4AC23D4251100A4D8E6 /* Model */,
 				CC41814423D30B12009E1EA5 /* View */,
 				CC1E015923CF8F6C00F325A9 /* Assets.xcassets */,
@@ -219,7 +220,6 @@
 		CC29E4AC23D4251100A4D8E6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CC4180FC23D2CFBE009E1EA5 /* SharedData.swift */,
 				CC06290723D6121500D208D5 /* Vegetable.swift */,
 				CC06290923D6153400D208D5 /* VegetableSearchFilter.swift */,
 				CCC5C7D423DF62BC0075773E /* LiquidSearchFilter.swift */,

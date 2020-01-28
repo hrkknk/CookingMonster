@@ -22,7 +22,7 @@ struct RecipeMakingProcedureView: View {
 
                 HStack {
                     NavigationView {
-                        List(self.getIngredients(), id: \.self, selection: self.$selectionKeeper) { name in
+                        List(self.getFoodStaff(), id: \.self, selection: self.$selectionKeeper) { name in
                             Text(name)
                         }
                         .environment(\.editMode, .constant(EditMode.active))
@@ -57,12 +57,15 @@ struct RecipeMakingProcedureView: View {
         }
     }
 
-    func getIngredients() -> [String] {
-        var ingredientsNameList: [String] = []
+    func getFoodStaff() -> [String] {
+        var foodStaffNameList: [String] = []
         for item in sharedData.recipe.ingredients {
-            ingredientsNameList.append(item.name)
+            foodStaffNameList.append(item.name)
         }
-        return ingredientsNameList
+        for item in sharedData.recipe.seasonings {
+            foodStaffNameList.append(item.name)
+        }
+        return foodStaffNameList
     }
 
     func addProcedureToRecipe() {
@@ -86,11 +89,9 @@ struct RecipeMakingProcedureView: View {
                     selectedFoodStaff.append(foodStaff)
                 }
             }
-            if let seasonings = sharedData.recipe.seasonings {
-                for foodStaff in seasonings {
-                    if selected == foodStaff.name {
-                        selectedFoodStaff.append(foodStaff)
-                    }
+            for foodStaff in sharedData.recipe.seasonings {
+                if selected == foodStaff.name {
+                    selectedFoodStaff.append(foodStaff)
                 }
             }
         }

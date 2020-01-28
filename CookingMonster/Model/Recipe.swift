@@ -12,7 +12,7 @@ struct Recipe: Identifiable {
     let id: Int?
     var name: String
     var ingredients: [Ingredient]
-    var seasonings: [Seasoning]?
+    var seasonings: [Seasoning]
     var procedures: [Procedure]
-    var memos: [RecipeMemo]?
+    var memos: [RecipeMemo]
 }
