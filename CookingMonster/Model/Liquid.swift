@@ -1,22 +1,14 @@
 //
-//  Seasoning.swift
+//  Liquid.swift
 //  CookingMonster
 //
-//  Created by hiroki kaneko on 2020/01/24.
+//  Created by hiroki kaneko on 2020/01/28.
 //  Copyright © 2020 hiroki kaneko. All rights reserved.
 //
 
 import Foundation
 
-enum SeasoningForm {
-    case unselected
-    case liquid
-    case solid
-    case powder
-    case other
-}
-
-enum SeasoningTaste {
+enum LiquidTaste {
     case unselected
     case sweet
     case salty
@@ -28,11 +20,22 @@ enum SeasoningTaste {
     case other
 }
 
-struct Seasoning: FoodStaff, Identifiable {
+enum LiquidColor {
+    case unselected
+    case white
+    case red
+    case yellow
+    case brown
+    case black
+    case green
+    case transparent
+}
+
+struct Liquid: FoodStaff, Identifiable {
     let id: UUID
     let name: String
-    let form: SeasoningForm
-    let tastes: [SeasoningTaste]
+    let colors: [LiquidColor]
+    let taste: LiquidTaste
     var amount: Int?
     var unit: String
 }

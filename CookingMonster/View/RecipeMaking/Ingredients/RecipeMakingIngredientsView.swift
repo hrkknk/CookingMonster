@@ -14,7 +14,7 @@ struct RecipeMakingIngredientsView: View {
     var body: some View {
         VStack(spacing: 50) {
             Button(action: {
-                self.sharedData.displayedView = DisplayedView.recipeMakingVegetables
+                self.sharedData.displayedView = DisplayedView.recipeMakingVegetable
             }) {
                 Text("野菜")
             }

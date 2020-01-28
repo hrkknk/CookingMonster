@@ -36,7 +36,7 @@ struct RecipeMakingVegetableSearchView: View {
             Button(action: {
             }) {
                 Text("戻る").onTapGesture {
-                    self.sharedData.displayedView = .recipeMakingVegetables
+                    self.sharedData.displayedView = .recipeMakingVegetable
                 }
             }
         }
